@@ -28,6 +28,11 @@ func main() {
 		IsFree: true,
 	}
 
+	js := Course{}
+	js.Name = "Curso JS"
+	js.UserIDs = []uint{12, 67}
+
 	fmt.Println(Go.Name)
-	fmt.Printf("%+v", css)
+	fmt.Printf("%+v\n", css)
+	fmt.Printf("%+v", js)
 }
