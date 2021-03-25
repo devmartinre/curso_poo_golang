@@ -2,14 +2,6 @@ package main
 
 import "fmt"
 
-type Course struct {
-	Name    string
-	Price   float64
-	IsFree  bool
-	UserIDs []uint
-	Classes map[uint]string
-}
-
 func main() {
 	Go := Course{
 		"Go desde Cero",
@@ -32,7 +24,11 @@ func main() {
 	js.Name = "Curso JS"
 	js.UserIDs = []uint{12, 67}
 
-	fmt.Println(Go.Name)
+	//fmt.Println(Go.Name)
 	fmt.Printf("%+v\n", css)
-	fmt.Printf("%+v", js)
+	//fmt.Printf("%+v", js)
+
+	Go.PrintClasses()
+	Go.ChangePrice(67.12)
+	fmt.Println(Go.Price)
 }
